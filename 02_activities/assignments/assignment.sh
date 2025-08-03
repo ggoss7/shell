@@ -58,7 +58,11 @@ rm ./data/processed/user_logs/*ipaddr*
 
 # 8. find ./data/processed -type f > ./data/inventory.txt
 
+git add assignment.sh
+git commit
 
 ###########################################
 
 echo "Project setup is complete!"
+
+git status
