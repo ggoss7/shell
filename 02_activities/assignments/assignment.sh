@@ -18,6 +18,7 @@ cd newproject
 
 mkdir analysis output
 touch README.md
+echo "# Project Name: DSI Consulting Inc." > README.md
 touch analysis/main.py
 
 # download client data
@@ -31,7 +32,7 @@ unzip -q rawdata.zip
 mkdir data/
 
 # 2. Move the ./rawdata directory to ./data/raw
-cp ./rawdata ./data/raw
+mv ./rawdata ./data/raw
 
 # 3. List the contents of the ./data/raw directory
 ls ./data/raw
@@ -56,9 +57,14 @@ rm ./data/raw/*ipaddr*
 # Remove from ./data/processed/user_logs
 rm ./data/processed/user_logs/*ipaddr*
 
-# 8. find ./data/processed -type f > ./data/inventory.txt
+# 8. Create a file named ./data/inventory.txt that lists all the files in the subfolders of ./data/processed
+find ./data/processed -type f > ./data/inventory.txt
 
+git add assignment.sh
+git commit
 
 ###########################################
 
 echo "Project setup is complete!"
+
+git status
