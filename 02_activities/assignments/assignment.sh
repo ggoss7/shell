@@ -56,8 +56,8 @@ rm ./data/raw/*ipaddr*
 # Remove from ./data/processed/user_logs
 rm ./data/processed/user_logs/*ipaddr*
 
-# 8. find ./data/processed 
--type f > ./data/inventory.txt
+# 8. 
+find ./data/processed
 
 git add assignment.sh
 git commit
