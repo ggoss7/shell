@@ -31,7 +31,7 @@ unzip -q rawdata.zip
 mkdir data/
 
 # 2. Move the ./rawdata directory to ./data/raw
-cp ./rawdata ./data/raw
+mv ./rawdata ./data/raw
 
 # 3. List the contents of the ./data/raw directory
 ls ./data/raw
@@ -56,7 +56,8 @@ rm ./data/raw/*ipaddr*
 # Remove from ./data/processed/user_logs
 rm ./data/processed/user_logs/*ipaddr*
 
-# 8. find ./data/processed -type f > ./data/inventory.txt
+# 8. find ./data/processed 
+-type f > ./data/inventory.txt
 
 
 ###########################################
